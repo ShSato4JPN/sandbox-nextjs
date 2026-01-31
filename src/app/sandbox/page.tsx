@@ -1,31 +1,17 @@
-import NormalClientComponent from "./client/client";
-import CompositionClientComponent from "./client/composition-client";
-import ServerComponent from "./server";
+import Link from "next/link";
 
 export default function SandBox() {
   return (
     <div style={{ padding: "20px" }}>
-      <h1>Client Component パターン比較</h1>
-
-      <section>
-        <h2>1. 通常パターン</h2>
-        <p>
-          クライアントコンポーネント内でServerComponentをimportすると、
-          ServerComponentもクライアントコンポーネントとして扱われる。
-        </p>
-        <NormalClientComponent />
-      </section>
-
-      <section style={{ marginTop: "32px" }}>
-        <h2>2. Compositionパターン</h2>
-        <p>
-          ServerComponentをchildrenとして渡すと、
-          ServerComponentはサーバー側でレンダリングされる。
-        </p>
-        <CompositionClientComponent>
-          <ServerComponent />
-        </CompositionClientComponent>
-      </section>
+      <h1>Sandbox</h1>
+      <ul>
+        <li>
+          <Link href="/sandbox/client-pattern">Client Component パターン比較</Link>
+        </li>
+        <li>
+          <Link href="/sandbox/react-compiler">React Compiler 動作確認</Link>
+        </li>
+      </ul>
     </div>
   );
 }
