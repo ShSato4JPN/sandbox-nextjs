@@ -1,3 +1,3 @@
 export default function Default() {
-  return null;
+  return <div>sample2 default</div>;
 }
