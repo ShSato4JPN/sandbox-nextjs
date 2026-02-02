@@ -22,6 +22,10 @@
       "type": "stdio",
       "command": "npx",
       "args": ["--yes", "@upstash/context7-mcp"]
+    },
+    "next-devtools": {
+      "command": "npx",
+      "args": ["-y", "next-devtools-mcp@latest"]
     }
   }
 }
